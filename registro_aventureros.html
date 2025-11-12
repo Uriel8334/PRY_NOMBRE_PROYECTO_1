@@ -1,13 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         Club aventureros
     </title>
+    <link rel="stylesheet" href="./public/vendor/bootstrap-5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/registro_aventureros.css">
 </head>
+
 <body>
-    
+    <header>
+        <br>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">REGISTRO</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">ACTIVIDADES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">AVENTURA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">LOGIN</a>
+            </li>
+        </ul>
+        <br>
+        <label for="nombre_club">REGISTRO AL CLUB DE AVENTUREROS DIGITALES</label>
+        <label for="eslogan"></label>
+        <div class="card mb-3 align-items-center img">
+            <img class="card-img-top" src="./public/img/Encuentro-Red-Familiar-de-Aventureros.jpg"
+                alt="imagen de aventureros">
+            <div class="card-body">
+                <p class="card-text">VEN Y DIVIERTETE EN UNA GRAN AVENTURA</p>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <div class="aling-items-center">
+            <form action="./server.html">
+                <article>
+                    <fieldset>
+                        <legend><label for="nombre_completo">Nombre Completo</label></legend>
+                        <input class="form-control" type="text" name="nombre_completo" id="nombre_completo" required minlength="3"
+                            maxlength="30" value="Uriel Alejandro Andrade Hermosa"
+                            placeholder="Ingrese su nombre completo" title="Ingrese su nombre completo">
+                        <br><br>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend><label for="correo_elec">CORREO ELECTRONICO</label></legend>
+                        <input class="form-control" type="email" name="correo_elec" id="correo_elec" required
+                            value="andradeuriel8334@hotmail.com" title="Ingrese su correo electronico">
+                        <br><br>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend><label for="password-in">CONTRASEÑA</label></legend>
+                        <input class="form-control" type="password" id="password-in" name="password-in" required
+                            minlength="8" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}"
+                            value="MortalDos8*@" title="Ingrese su contraseña"><br>
+                        <small>Al menos una mayúscula, una minúscula, un número y un símbolo.</small>
+                        <br><br>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend><label for="password-conf">CONFIRMAR CONTRASEÑA</label></legend>
+                        <input class="form-control" type="password" name="password-conf" id="password-conf" required
+                            pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}" value="MortalDos8*@"
+                            title="Vuelva a ingresar su contraseña"><br>
+                        <small>Al menos una mayúscula, una minúscula, un número y un símbolo.</small><br>
+                        <br><br>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend><label for="pais">PAIS
+                            </label></legend>
+                        <select name="pais" id="pais" required title="Seleccione su pais de origen">
+                            <option value="pais[]">ECUADOR</option>
+                            <option value="pais[]">VENEZUELA</option>
+                            <option value="pais[]">COLOMBIA</option>
+                            <option value="pais[]">PARAGUAY</option>
+                        </select>
+                        <br><br>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend><label for="edad">EDAD</label></legend>
+                        <input class="form-control" type="number" id="edad" name="edad" min="10" max="100" required
+                            value="25" pattern="{0-9}"><br>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend><label for="genero">GENERO</label></legend>
+                        <input class="form-check-input" type="radio" required name="genero" id="genero" checked><label
+                            for="genero">MASCULINO</label><br>
+                        <input class="form-check-input" type="radio" required name="genero" id="generof"><label
+                            for="generof">FEMENINO</label><br><br><br>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend><label for="terminos">ACEPTAR TERMINOS DE USO <input type="checkbox" id="terminos"
+                                    name="terminos" required checked class="form-check-input"></label></legend>
+                    </fieldset>
+                    <button class="btn btn-primary" type="submit">ENVIAR FORMULARIO</button>
+                    <button class="btn btn-danger" type="reset">RESETEAR CAMPOS</button><br><br>
+                </article>
+            </form>
+        </div>
+
+    </main>
+    <footer>
+        <label for="derechos-autor">TODOS LOS DERECHOS RESERVADOS &copy;</label><br>
+        <label for="autor-final">DISEÑADO POR URIEL ANDRADE</label>
+    </footer>
+
+
+    <script src="./public/vendor/bootstrap-5/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
